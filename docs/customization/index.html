@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Customization | Staticnest</title>
+    <meta name="description" content="Extend the built-in theme with optional local templates, CSS, and JavaScript." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/staticnest-docs/assets/site.css" />
+    
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="menu-toggle" type="button" data-menu-toggle>≡</button>
+        <a class="brand" href="/staticnest-docs/">
+          <span class="brand-mark"></span>
+          <span class="brand-label">Staticnest</span>
+        </a>
+      </div>
+      <div class="topbar-actions">
+        <nav class="top-nav"><details class="top-nav-group"><summary class="top-nav-link">Resources</summary><div class="top-nav-menu"><a class="top-nav-menu-link" href="/docs/getting-started/">Getting Started</a><a class="top-nav-menu-link" href="/docs/configuration/">Configuration</a></div></details></nav>
+        <label class="search-shell">
+          <input type="search" placeholder="Search documentation..." data-search-input />
+          <span class="search-kbd">K</span>
+        </label>
+        <a class="icon-link" href="https://github.com/Dev-kitx/staticnest-docs" aria-label="GitHub" title="GitHub"><img class="icon-link-image" src="https://github.githubassets.com/favicons/favicon.svg" alt="GitHub" /></a>
+      </div>
+    </header>
+    <main class="layout">
+      <aside class="sidebar" data-sidebar>
+        <p class="sidebar-title">Documentation</p>
+        <nav class="nav-tree"><a class="nav-link nav-depth-0" href="/staticnest-docs/">Overview</a><div class="nav-group-label nav-depth-0">Guides</div><div class="nav-children nav-depth-1"><a class="nav-link nav-depth-1" href="/staticnest-docs/docs/getting-started/">Getting Started</a><a class="nav-link nav-depth-1" href="/staticnest-docs/docs/configuration/">Configuration</a><a class="nav-link nav-depth-1" href="/staticnest-docs/docs/authoring/">Authoring</a><a class="nav-link nav-depth-1" href="/staticnest-docs/docs/deployment/">Deployment</a><a class="nav-link active nav-depth-1" href="/staticnest-docs/docs/customization/">Customization</a><div class="nav-children nav-depth-2"><a class="nav-link nav-depth-2" href="/staticnest-docs/docs/customization/theme-overrides/">Theme Overrides</a></div></div></nav>
+      </aside>
+      <section class="content-shell">
+        <div class="breadcrumbs"><a href="/staticnest-docs/docs/customization/">Documentation</a><span class="breadcrumb-sep">›</span><span>Guides</span><span class="breadcrumb-sep">›</span><strong>Customization</strong></div>
+        <div class="article-toolbar">
+          <button class="copy-link" type="button" data-copy-link><span>Copy page</span></button>
+        </div>
+        <div class="search-results" data-search-results></div>
+        <article class="article-shell">
+          <h1>Customization</h1>
+          <p>The default <code>nest</code> theme is built into Staticnest. Most users can stay on the bundled theme and only adjust content, navigation, and brand settings.</p>
+<p>If you need deeper control, Staticnest supports local theme overrides.</p>
+<h2 id="included-hooks">Included hooks</h2>
+<ul><li>Page-level front matter for order, summaries, and template selection</li><li>Theme template overrides from <code>theme/templates/</code></li><li>Additional CSS and JavaScript from <code>theme/assets/</code></li></ul>
+<h2 id="when-to-use-overrides">When to use overrides</h2>
+<p>Use local theme overrides when you want to:</p>
+<ul><li>change the outer page shell</li><li>add custom styling on top of the built-in theme</li><li>inject custom page behavior with JavaScript</li></ul>
+<p>If you only need site name, accent, navigation, and content changes, stay in <code>site.toml</code>, <code>navigation.yml</code>, and <code>content/</code>.</p>
+          <nav class="pager"><a class="pager-link prev" href="/staticnest-docs/docs/deployment/"><span class="pager-label">Previous</span><strong>Deployment</strong></a><a class="pager-link next" href="/staticnest-docs/docs/customization/theme-overrides/"><span class="pager-label">Next</span><strong>Theme Overrides</strong></a></nav>
+        </article>
+      </section>
+      <aside class="toc">
+        <p class="toc-title">On This Page</p>
+        <nav class="toc-list"><a class="toc-link toc-level-2" href="#included-hooks">Included hooks</a><a class="toc-link toc-level-2" href="#when-to-use-overrides">When to use overrides</a></nav>
+        <div class="toc-meta">
+          <a href="https://github.com/Dev-kitx/staticnest-docs/issues">Question? Give us feedback</a>
+          <a href="https://github.com/Dev-kitx/staticnest-docs">Edit this page on GitHub</a>
+        </div>
+      </aside>
+    </main>
+    <script id="search-index" type="application/json">[{&quot;title&quot;: &quot;Authoring&quot;, &quot;url&quot;: &quot;/staticnest-docs/docs/authoring/&quot;, &quot;summary&quot;: &quot;Write pages with Markdown, front matter, headings, and fenced code blocks.&quot;, &quot;headings&quot;: [&quot;Authoring&quot;, &quot;Content structure&quot;, &quot;Page titles&quot;, &quot;Front matter&quot;, &quot;Headings and table of contents&quot;, &quot;Code blocks&quot;, &quot;Links&quot;], &quot;content&quot;: &quot;Authoring Content structure Page titles Front matter Headings and table of contents Code blocks Links Authoring Staticnest reads Markdown files from your configured content/ directory and turns them into documentation pages. Content structure A typical project looks like this: index.md becomes / docs/getting started.md becomes /docs/getting started/ docs/configuration.md becomes /docs/configuration/ Page titles The first Heading in a file becomes the page title unless front matter overrides it. Front matter Staticnest supports both YAML style and TOML style front matter. Supported fields: title nav title summary order template draft Headings and table of contents Second level and third level headings are collected into the right side table of contents automatically. Code blocks Use fenced code blocks for commands and examples. The built in theme adds a language label, copy button, and lightweight syntax highlighting. Links Use normal Markdown links for internal or external references.&quot;}, {&quot;title&quot;: &quot;Configuration&quot;, &quot;url&quot;: &quot;/staticnest-docs/docs/configuration/&quot;, &quot;summary&quot;: &quot;Configure the site title, brand, content paths, theme, and navigation behavior.&quot;, &quot;headings&quot;: [&quot;Configuration&quot;, &quot;Example configuration&quot;, &quot;Core fields&quot;, &quot;Navigation file&quot;, &quot;Brand section&quot;, &quot;Links section&quot;, &quot;Theme section&quot;, &quot;Output and publish behavior&quot;], &quot;content&quot;: &quot;Configuration Example configuration Core fields Navigation file Brand section Links section Theme section Output and publish behavior Configuration Site settings live in site.toml. Example configuration Core fields title: Browser title and top navigation label tagline: Introductory text shown in the shell description: Metadata description base url: Root path for the site content dir: Source markdown directory output dir: Generated site directory nav file: YAML file that controls sidebar structure and order Navigation file The nav file points to a YAML file that defines both: the left documentation sidebar the top header navigation bar Example: In that example, github is a special top right header logo link. resources is a regular header navigation item, so with items it renders as a dropdown just to the left of search. The built in theme treats navigation bar.github as the dedicated top right logo action, not a regular header nav item. Other navigation bar entries render just to the left of search. Set: title for the link label and text fallback link for the repository or organization URL logo for the image shown in the top right corner alt if you want custom image alt text If you set a top level issues.link, the built in theme uses it for the Question? Give us feedback link in the table of contents panel. Brand section The [brand] table controls presentation. Links section Use [links] for external destinations like GitHub. links.github remains the fallback if navigation bar.github.link is not set. Theme section Use [theme] to select the built in nest theme. The theme is bundled with the package, so users do not need a local theme/ directory just to use it. For advanced overrides: Output and publish behavior The publish command uses output dir by default. Pass destination if you want a one off publish location. For GitHub Pages, use gh deploy. The build output now includes: .nojekyll 404.html&quot;}, {&quot;title&quot;: &quot;Customization&quot;, &quot;url&quot;: &quot;/staticnest-docs/docs/customization/&quot;, &quot;summary&quot;: &quot;Extend the built-in theme with optional local templates, CSS, and JavaScript.&quot;, &quot;headings&quot;: [&quot;Customization&quot;, &quot;Included hooks&quot;, &quot;When to use overrides&quot;], &quot;content&quot;: &quot;Customization Included hooks When to use overrides Customization The default nest theme is built into Staticnest. Most users can stay on the bundled theme and only adjust content, navigation, and brand settings. If you need deeper control, Staticnest supports local theme overrides. Included hooks Page level front matter for order, summaries, and template selection Theme template overrides from theme/templates/ Additional CSS and JavaScript from theme/assets/ When to use overrides Use local theme overrides when you want to: change the outer page shell add custom styling on top of the built in theme inject custom page behavior with JavaScript If you only need site name, accent, navigation, and content changes, stay in site.toml, navigation.yml, and content/.&quot;}, {&quot;title&quot;: &quot;Theme Overrides&quot;, &quot;url&quot;: &quot;/staticnest-docs/docs/customization/theme-overrides/&quot;, &quot;summary&quot;: &quot;Replace the page shell and layer custom CSS or JavaScript on top of the built-in nest theme.&quot;, &quot;headings&quot;: [&quot;Theme Overrides&quot;, &quot;Template files&quot;, &quot;Recommended project structure&quot;, &quot;What the page template receives&quot;, &quot;Asset overrides&quot;, &quot;Start with CSS first&quot;, &quot;Per-page template selection&quot;, &quot;Recommended approach&quot;], &quot;content&quot;: &quot;Theme Overrides Template files Recommended project structure What the page template receives Asset overrides Start with CSS first Per-page template selection Recommended approach Theme Overrides Theme overrides are optional. Staticnest looks for user owned presentation files in the theme/ directory configured by site.toml. Enable them like this: Template files theme/templates/page.html replaces the outer page shell theme/templates/&lt;name .html can be selected per page using front matter Recommended project structure What the page template receives site title and page title brand and GitHub link values top navigation and sidebar navigation markup breadcrumbs and pager markup rendered article HTML table of contents HTML search index data and base JavaScript optional custom CSS, custom JavaScript, and live reload script tags If you want to replace the outer shell, start from the built in structure and make one change at a time instead of rewriting the whole template at once. Asset overrides Files in theme/assets/ are copied into dist/assets/. custom.css is linked automatically custom.js is loaded automatically Start with CSS first Most customization work should begin in theme/assets/custom.css. Per page template selection If you create additional templates under theme/templates/, you can select them from front matter. Recommended approach Start small: add theme/assets/custom.css add theme/assets/custom.js only if needed override theme/templates/page.html only when the shell itself needs to change If you are only changing colors, spacing, or component styling, prefer custom.css over replacing the whole page shell.&quot;}, {&quot;title&quot;: &quot;Deployment&quot;, &quot;url&quot;: &quot;/staticnest-docs/docs/deployment/&quot;, &quot;summary&quot;: &quot;Build production output, publish to a destination, and deploy to GitHub Pages.&quot;, &quot;headings&quot;: [&quot;Deployment&quot;, &quot;Build output&quot;, &quot;Preview before publishing&quot;, &quot;Publish&quot;, &quot;GitHub Pages&quot;, &quot;What `gh-deploy` expects&quot;], &quot;content&quot;: &quot;Deployment Build output Preview before publishing Publish GitHub Pages What `gh-deploy` expects Deployment Staticnest supports both local build output and GitHub Pages deployment. Build output Generate the static site into output dir: By default that writes to the directory configured in site.toml: Preview before publishing Use the preview server during development: This serves the generated site and reloads when content or config changes. Publish publish uses the configured output dir unless you provide a one off destination: GitHub Pages Use gh deploy to publish the built site to a gh pages branch. Optional flags: remote origin branch gh pages message \&quot;Deploy staticnest site\&quot; The generated output includes: .nojekyll 404.html These files help GitHub Pages serve the site correctly. What gh deploy expects a Git repository a configured remote permission to push to the target branch&quot;}, {&quot;title&quot;: &quot;Getting Started&quot;, &quot;url&quot;: &quot;/staticnest-docs/docs/getting-started/&quot;, &quot;summary&quot;: &quot;Create a project, understand the generated files, and start the local preview loop.&quot;, &quot;headings&quot;: [&quot;Getting Started&quot;, &quot;Install or run locally&quot;, &quot;Understand the scaffold&quot;, &quot;Preview the site&quot;, &quot;Build the static output&quot;, &quot;Add your first page&quot;, &quot;Next steps&quot;], &quot;content&quot;: &quot;Getting Started Install or run locally Understand the scaffold Preview the site Build the static output Add your first page Next steps Getting Started Create a new docs project with the CLI: This scaffolds: site.toml navigation.yml content/ Install or run locally If staticnest is installed as a package, use the console command directly: If you are developing from this repository, you can run the module form: Understand the scaffold site.toml controls site settings and selects the built in nest theme. navigation.yml controls the left sidebar, the top navigation, and the top right GitHub logo link. content/ contains your Markdown pages. Preview the site Start the local preview server: Then open http://127.0.0.1:8000. Build the static output When you want the generated files: That writes the site into the configured output dir. Add your first page Create a new file such as content/docs/architecture.md. Then add it to navigation.yml: Next steps Configuration for site.toml and navigation.yml Authoring for Markdown and front matter Deployment for publish and GitHub Pages&quot;}, {&quot;title&quot;: &quot;Staticnest Documentation&quot;, &quot;url&quot;: &quot;/staticnest-docs/&quot;, &quot;summary&quot;: &quot;Learn how to scaffold, write, preview, customize, and deploy documentation sites with Staticnest.&quot;, &quot;headings&quot;: [&quot;Staticnest Documentation&quot;, &quot;What Staticnest gives you&quot;, &quot;Typical workflow&quot;, &quot;Start here next&quot;], &quot;content&quot;: &quot;Staticnest Documentation What Staticnest gives you Typical workflow Start here next Staticnest Documentation Staticnest is a Python static site generator for documentation. It gives you a polished docs layout, explicit navigation, local preview with live reload, and a built in theme without forcing users into a frontend framework. What Staticnest gives you staticnest init to scaffold a new documentation project site.toml for site settings and theme selection navigation.yml for explicit sidebar and header navigation Markdown pages under content/ Local preview with rebuilds and live reload A built in nest docs theme GitHub Pages support through gh deploy Typical workflow Create a project with staticnest init. Write docs in content/. Organize pages in navigation.yml. Preview locally with staticnest preview. Build or deploy when you are ready. Start here next Getting Started walks through the first project setup. Configuration explains site.toml and navigation.yml. Authoring covers Markdown, front matter, and code blocks. Deployment covers build, publish, and gh deploy.&quot;}]</script>
+    <script>
+const searchInput = document.querySelector('[data-search-input]');
+const searchResults = document.querySelector('[data-search-results]');
+const sidebar = document.querySelector('[data-sidebar]');
+const menuToggle = document.querySelector('[data-menu-toggle]');
+const copyButton = document.querySelector('[data-copy-link]');
+const tocLinks = [...document.querySelectorAll('.toc-link')];
+const sections = tocLinks
+  .map((link) => document.querySelector(link.getAttribute('href')))
+  .filter(Boolean);
+
+if (menuToggle && sidebar) {
+  menuToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+  });
+}
+
+if (copyButton) {
+  copyButton.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      copyButton.querySelector('span').textContent = 'Copied';
+      window.setTimeout(() => {
+        copyButton.querySelector('span').textContent = 'Copy page';
+      }, 1200);
+    } catch (_error) {
+      copyButton.querySelector('span').textContent = 'Copy failed';
+    }
+  });
+}
+
+document.querySelectorAll('[data-code-copy]').forEach((button) => {
+  button.addEventListener('click', async () => {
+    const block = button.closest('.code-block');
+    const code = block ? block.querySelector('code') : null;
+    if (!code) return;
+    try {
+      await navigator.clipboard.writeText(code.textContent || '');
+      button.textContent = 'Copied';
+      window.setTimeout(() => {
+        button.textContent = 'Copy';
+      }, 1200);
+    } catch (_error) {
+      button.textContent = 'Failed';
+    }
+  });
+});
+
+if (searchInput && searchResults) {
+  const pages = JSON.parse(document.querySelector('#search-index').textContent);
+  const renderMatches = (matches) => {
+    searchResults.innerHTML = matches.map((page) => `
+      <a class="search-result" href="${page.url}">
+        <span class="search-result-title">${page.title}</span>
+        <span class="search-result-copy">${page.summary}</span>
+      </a>
+    `).join('');
+    searchResults.classList.toggle('visible', matches.length > 0);
+  };
+
+  const focusSearch = () => {
+    searchInput.focus();
+    searchInput.select();
+  };
+
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.trim().toLowerCase();
+    if (!query) {
+      searchResults.classList.remove('visible');
+      searchResults.innerHTML = '';
+      return;
+    }
+
+    const matches = pages
+      .map((page) => {
+        const title = (page.title || '').toLowerCase();
+        const summary = (page.summary || '').toLowerCase();
+        const headings = (page.headings || []).join(' ').toLowerCase();
+        const content = (page.content || '').toLowerCase();
+        let score = 0;
+        if (title.includes(query)) score += 10;
+        if (summary.includes(query)) score += 6;
+        if (headings.includes(query)) score += 4;
+        if (content.includes(query)) score += 2;
+        return { ...page, score };
+      })
+      .filter((page) => page.score > 0)
+      .sort((a, b) => b.score - a.score || a.title.localeCompare(b.title))
+      .slice(0, 8);
+
+    renderMatches(matches);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
+      event.preventDefault();
+      focusSearch();
+    }
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!searchResults.contains(event.target) && event.target !== searchInput) {
+      searchResults.classList.remove('visible');
+    }
+  });
+}
+
+if (sections.length) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const id = entry.target.getAttribute('id');
+      tocLinks.forEach((link) => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+      });
+    });
+  }, { rootMargin: '-20% 0px -65% 0px', threshold: 1.0 });
+
+  sections.forEach((section) => observer.observe(section));
+}
+</script>
+    
+    
+  </body>
+</html>

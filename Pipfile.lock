@@ -1,0 +1,30 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "d31be963b5408f8227ceaa0899f1c39c31569e233aac90f215e72ea6652279bc"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.12"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.python.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "staticnest-cli": {
+            "hashes": [
+                "sha256:3544a4b001907837cec86e05832921a7f3c0967c3df46d4eaf7db36974751b82",
+                "sha256:bbb81917920673ee2206d33710be5256e4b5f6749e5ae4109776f8831613bb9f"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.9'",
+            "version": "==0.1.6"
+        }
+    },
+    "develop": {}
+}
